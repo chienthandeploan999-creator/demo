@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
+    <title>Gallery | 5 STAR NAIL BAR</title>
+    <meta name="description" content="Gallery of nail design images from 5 STAR NAIL BAR.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="logo.jpg" type="image/jpeg">
+    <style>
+    :root{--bg:#ffffff;--text:#171717;--muted:#5b5b67;--container:1120px;--gold:#d4af37;--gold-2:#b88a2e}
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:#ffffff url('anhnen.jpg') center/cover no-repeat;background-attachment:fixed;color:var(--text);font-family:Montserrat,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6;position:relative;display:flex;flex-direction:column;min-height:100vh}
+    @media(max-width:680px){body{background-attachment:scroll}}
+    body::before{content:"";position:fixed;inset:0;background:#fff;opacity:1;z-index:0;pointer-events:none}
+    .container{width:min(var(--container),92%);margin:0 auto}
+    .site-header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.85);backdrop-filter:blur(8px);border-bottom:1px solid #e8e8ef}
+    body{padding-top:64px}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:var(--text)}
+    .brand-logo{height:38px;width:auto;border:1px solid #e3e3ea;border-radius:8px;background:#fff}
+    .brand-name{font-family:"Playfair Display",serif;font-weight:700;font-size:20px}
+    .nav-menu{list-style:none;margin:0;padding:0;display:flex;gap:22px;align-items:center}
+    .nav-menu a{color:var(--text);text-decoration:none;font-weight:600;position:relative;padding-bottom:10px}
+    .nav-menu a.active{color:var(--gold)}
+    .nav-menu a.active::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:3px;background:var(--gold);border-radius:2px}
+    .section{padding:48px 0;position:relative;z-index:1}
+    .section-title{font-family:"Playfair Display",serif;font-size:32px;margin:0 0 18px}
+    .grid{display:grid;gap:14px;grid-template-columns:repeat(4,minmax(0,1fr))}
+    @media(max-width:1100px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+    .tile{border:1px solid #ececf2;border-radius:12px;overflow:hidden;background:#f7f7fb;transition:transform .15s ease,box-shadow .2s ease}
+    .tile:hover{transform:translateY(-3px);box-shadow:0 14px 28px rgba(0,0,0,.12)}
+    .tile img{display:block;width:100%;height:100%;object-fit:cover;cursor:zoom-in}
+    .nav-toggle{display:none;background:transparent;color:var(--text);border:1px solid #e3e3ea;padding:8px 12px;border-radius:8px;cursor:pointer;min-width:44px;min-height:44px}
+    @media(max-width:900px){
+      .grid{grid-template-columns:repeat(2,1fr);gap:10px}
+      body{padding-top:60px}
+      .section{padding:40px 0}
+      .section-title{font-size:clamp(24px,5vw,32px)}
+      .contact .contact-grid{grid-template-columns:1fr 1fr;gap:18px}
+      .contact-title{font-size:clamp(22px,4vw,28px)}
+      .contact-logo{width:100px;height:100px}
+    }
+    @media(max-width:680px){
+      body{padding-top:56px}
+      .site-header{padding:6px 0}
+      .brand-logo{height:32px}
+      .brand-name{font-size:16px}
+      .nav-toggle{display:inline-block}
+      .nav-menu{position:fixed;right:4%;top:56px;background:rgba(255,255,255,.99);border:1px solid #e8e8ef;border-radius:12px;padding:12px;display:none;flex-direction:column;gap:6px;width:min(280px,92vw);box-shadow:0 8px 24px rgba(0,0,0,.15)}
+      .nav-menu.open{display:flex}
+      .nav-menu a{padding:12px 16px;min-height:44px;display:flex;align-items:center}
+      .section{padding:32px 0}
+      .grid{grid-template-columns:repeat(2,1fr);gap:8px}
+      .contact .contact-grid{grid-template-columns:1fr;gap:16px}
+      .contact-title{font-size:clamp(20px,5vw,24px)}
+      .contact-logo{width:80px;height:80px}
+      .contact-row{font-size:14px}
+      .socials{gap:8px}
+      .social{width:40px;height:40px}
+      .contact-map iframe{height:200px}
+      .footer-cols{grid-template-columns:1fr 1fr;gap:20px}
+    }
+    @media(max-width:480px){
+      .grid{grid-template-columns:1fr}
+      .contact .contact-grid{grid-template-columns:1fr}
+      .contact-map iframe{height:180px}
+      .section{padding:28px 0}
+      .footer-cols{grid-template-columns:1fr}
+    }
+    /* Lightbox */
+    .lightbox-backdrop{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.78);z-index:2000;padding:18px}
+    .lightbox-backdrop.open{display:flex}
+    .lightbox-backdrop img{max-width:90vw;max-height:90vh;border-radius:14px;box-shadow:0 20px 40px rgba(0,0,0,.35);background:#fff}
+    /* Contact */
+    .contact{position:relative;padding:48px 0}
+    .contact::before{content:"";position:absolute;inset:0;background:url('anhnen.jpg') center/cover fixed no-repeat;z-index:-2;opacity:.25}
+    .contact::after{content:"";position:absolute;inset:0;background:rgba(255,255,255,.35);z-index:-1}
+    .contact>.container{position:relative;z-index:1}
+    .contact .contact-grid{display:grid;grid-template-columns:1.3fr 1fr 1.4fr;gap:22px;align-items:start}
+    .contact-title{font-family:"Playfair Display",serif;font-size:32px;margin:0 0 12px}
+    .contact-logo{width:120px;height:120px;object-fit:cover;border-radius:20px;box-shadow:0 10px 24px rgba(0,0,0,.08);border:1px solid #ececf2;display:block;margin-bottom:10px}
+    .contact-row{margin:6px 0;color:var(--muted)}
+    .socials{display:flex;gap:10px;margin-top:10px}
+    .social{width:36px;height:36px;display:grid;place-items:center;border-radius:50%;border:1px solid #e3e3ea;color:#111;text-decoration:none;background:#fff}
+    .social:hover{background:#111;color:#fff}
+    .hours{margin:0;padding-left:18px;color:var(--muted)}
+    .contact-map iframe{width:100%;height:260px;border:1px solid #e3e3ea;border-radius:12px;box-shadow:0 10px 24px rgba(0,0,0,.08)}
+    .footer-bottom{text-align:center;color:#333;border-top:1px solid #e8e8ef;padding:16px 0;font-size:14px;font-weight:600;position:relative;z-index:1}
+    .footer-info{border-top:1px solid #e8e8ef;border-bottom:1px solid #e8e8ef;background:transparent;position:relative;z-index:1}
+    .footer-cols{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:32px;align-items:start;padding:24px 0}
+    .footer-brand{display:flex;align-items:center;gap:12px}
+    .footer-logo{width:44px;height:44px;border-radius:8px;border:1px solid #e3e3ea;object-fit:cover;background:#fff}
+    .footer-title{font-family:"Playfair Display",serif;font-weight:700;margin:0}
+    .muted{color:var(--muted)}
+    @media(max-width:680px){.footer-cols{grid-template-columns:1fr 1fr;gap:20px}}
+    @media(max-width:480px){.footer-cols{grid-template-columns:1fr}}
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html#hero" class="brand" aria-label="5 STAR NAIL BAR">
+                <img class="brand-logo" src="logo.jpg" alt="5 STAR NAIL BAR">
+                <span class="brand-name">5 STAR NAIL BAR</span>
+            </a>
+            <nav class="nav" aria-label="Main">
+                <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">☰</button>
+                <ul id="nav-menu" class="nav-menu">
+                    <li><a href="index.html#hero">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="index.html#dich-vu">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="index.html#blog">Blog</a></li>
+                    <li><a href="index.html#lien-he">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <h1 class="section-title">Gallery</h1>
+            <div class="grid">
+                <figure class="tile"><img src="q1.jpg" alt="Design 1"></figure>
+                <figure class="tile"><img src="q2.jpg" alt="Design 2"></figure>
+                <figure class="tile"><img src="q3.jpg" alt="Design 3"></figure>
+                <figure class="tile"><img src="q4.jpg" alt="Design 4"></figure>
+                <figure class="tile"><img src="q5.jpg" alt="Design 5"></figure>
+                <figure class="tile"><img src="q6.jpg" alt="Design 6"></figure>
+                <figure class="tile"><img src="q7.jpg" alt="Design 7"></figure>
+                <figure class="tile"><img src="q8.jpg" alt="Design 8"></figure>
+            </div>
+        </div>
+    </section>
+
+    <div class="lightbox-backdrop" aria-hidden="true"><img alt=""></div>
+
+    <section id="lien-he" class="section contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-brand">
+                    <img class="contact-logo" src="w21.jpg" alt="5 STAR NAIL BAR logo">
+                    <h2 class="contact-title">Contact</h2>
+                    <p class="contact-row">☎ (407) 703-2373</p>
+                    <p class="contact-row">📍 621 E MAIN ST, APOPKA, FL 32703</p>
+                    <div class="socials">
+                        <a href="https://www.facebook.com/5starnailbarapopka" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M13 3h4a1 1 0 0 1 1 1v3h-3c-.55 0-1 .45-1 1v3h4l-1 4h-3v9h-4v-9H7v-4h3V8.5A5.5 5.5 0 0 1 15.5 3H17"/></svg>
+                        </a>
+                        <a href="https://www.google.com/search?q=5+Star+Nail+Bar+Apopka+FL+32703&ludocid=6332876811964097371&lsig=AB86z5VWB0qkQeEKSFLA_2hWEz7v" target="_blank" rel="noopener noreferrer" aria-label="Google" class="social">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+                                <path d="M12 2a10 10 0 1 0 0 20c5.2 0 9.5-3.9 9.5-9 0-.6-.1-1.1-.2-1.6h-9.3v3h5.4c-.3 1.7-1.9 3-3.9 3-2.3 0-4.1-1.8-4.1-4.1S11.7 9 14 9c1 0 1.9.4 2.5 1l2-2.1C17.5 6.9 15.9 6 14 6c-3.3 0-6 2.5-6 5.9s2.7 6.1 6.1 6.1c3.5 0 6-2.4 6-5.8 0-.4-.1-.9-.1-1.2L12 10.9V8.4h9.5c.1.5.2 1 .2 1.6 0 5.5-4.3 10-9.7 10A10 10 0 1 1 12 2Z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-hours">
+                    <h2 class="contact-title">Business Hours</h2>
+                    <ul class="hours">
+                        <li>Mon - Sat: 9 AM - 7 PM</li>
+                        <li>Sun: 11AM - 5PM</li>
+                    </ul>
+                </div>
+                <div class="contact-map">
+                    <iframe title="Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.1234567890!2d-81.4977491!3d28.6741252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e7774a9298abe1%3A0x57e2e5e84f6da35b!2s5%20Star%20Nail%20Bar!5e0!3m2!1sen!2sus!4v1736380800000!5m2!1sen!2sus" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer-info">
+        <div class="container footer-cols">
+            <div>
+                <div class="footer-brand">
+                    <img src="logo.jpg" alt="5 STAR NAIL BAR" class="footer-logo">
+                    <h3 class="footer-title">5 STAR NAIL BAR</h3>
+                </div>
+                <p class="muted">Looking for the best nail salon near you in Apopka, FL 32703 where you feel truly pampered? 5 Star Nail Bar 32703 welcomes you with a warm smile and a relaxing atmosphere. Enjoy top-quality service at affordable prices. Call (407) 703-2373 or book online now!</p>
+                <p class="muted">Fancy being healthy, pretty, and happy? Visit: Nail Salon in Apopka, FL 32703 | Nail Salon FL 32703 today.</p>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <p class="muted">621 E MAIN ST, APOPKA, FL 32703</p>
+                <p class="muted">Phone: (407) 703-2373</p>
+                <p class="muted">Email: thilanhle160988@gmail.com</p>
+            </div>
+            <div>
+                <h4>Business Hours</h4>
+                <p class="muted">Mon - Sat: 9 AM - 7 PM</p>
+                <p class="muted">Sun: 11AM - 5PM</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer-bottom">© <span id="year"></span> 5 STAR NAIL BAR. Designed by SongLang.</div>
+
+    <script>
+    const yearEl=document.getElementById('year'); if(yearEl) yearEl.textContent=String(new Date().getFullYear());
+    // Mobile menu toggle
+    const navToggle=document.querySelector('.nav-toggle');
+    const navMenu=document.getElementById('nav-menu');
+    navToggle?.addEventListener('click',()=>{
+      const expanded=navToggle.getAttribute('aria-expanded')==='true';
+      navToggle.setAttribute('aria-expanded',String(!expanded));
+      navMenu?.classList.toggle('open');
+    });
+    // Active underline by path
+    (function(){
+      const links=document.querySelectorAll('.nav-menu a');
+      const path=location.pathname.split('/').pop()||'index.html';
+      links.forEach(l=>{
+        const href=l.getAttribute('href');
+        if(href && !href.startsWith('#')){
+          const file=href.split('/').pop();
+          if(file===path) l.classList.add('active');
+        }
+      });
+    })();
+    // Lightbox for gallery
+    (function(){
+      const lightbox=document.querySelector('.lightbox-backdrop');
+      if(!lightbox) return;
+      const lightboxImg=lightbox.querySelector('img');
+      const targets=document.querySelectorAll('.grid .tile img');
+      targets.forEach(img=>{
+        img.addEventListener('click',()=>{
+          lightboxImg.src=img.src;
+          lightboxImg.alt=img.alt||'';
+          lightbox.classList.add('open');
+          lightbox.setAttribute('aria-hidden','false');
+        });
+      });
+      lightbox.addEventListener('click',(e)=>{
+        if(e.target===lightbox){
+          lightbox.classList.remove('open');
+          lightbox.setAttribute('aria-hidden','true');
+          lightboxImg.src='';
+        }
+      });
+      document.addEventListener('keydown',(e)=>{
+        if(e.key==='Escape' && lightbox.classList.contains('open')){
+          lightbox.classList.remove('open');
+          lightbox.setAttribute('aria-hidden','true');
+          lightboxImg.src='';
+        }
+      });
+    })();
+    </script>
+</body>
+</html>
+
+

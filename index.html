@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
+    <title>5 STAR NAIL BAR - Premium Nail Services in USA</title>
+    <meta name="description" content="Premium nail salon with gold & black mysterious style. Adult services: nail art, hand care, skin care, nail care. Kids: nail polish, nail care, facial care.">
+    <meta name="theme-color" content="#0b0b0e">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="apple-touch-icon" href="icon-192.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="logo.jpg" type="image/jpeg">
+    <style>
+/* Light theme */
+:root {
+  --bg: #ffffff;
+  --bg-elev: #fbfbfc;
+  --text: #171717;
+  --muted: #5b5b67;
+  --gold: #d4af37;
+  --gold-2: #b88a2e;
+  --shadow: 0 10px 24px rgba(0,0,0,.08);
+  --radius: 14px;
+  --radius-sm: 10px;
+  --container: 1120px;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+ body { margin: 0; background: #ffffff url('anhnen.jpg') center / cover no-repeat; background-attachment: fixed; color: var(--text); font-family: Montserrat, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height: 1.6; position: relative; animation: pageFade .6s ease both; padding-top: 64px; }
+@media (max-width: 680px) {
+  body { background-attachment: scroll; }
+}
+/* White overlay above background image for entire page */
+body::before { content: ""; position: fixed; inset: 0; background: #ffffff; opacity: 1; pointer-events: none; z-index: 0; }
+/* Ensure content is above the white overlay */
+.site-header, .hero, .section, .site-footer { position: relative; z-index: 1; }
+
+.container { width: min(var(--container), 92%); margin: 0 auto; }
+
+/* Header */
+.site-header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(255,255,255,.85); backdrop-filter: blur(8px); border-bottom: 1px solid #e8e8ef; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
+.brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); }
+.brand-mark { display: none; }
+.brand-logo { height: 38px; width: auto; object-fit: contain; border-radius: 8px; border: 1px solid #e3e3ea; background: #fff; }
+.brand-name { font-family: "Playfair Display", serif; font-weight: 700; font-size: 20px; letter-spacing: .3px; }
+
+.nav-toggle { display: none; background: transparent; color: var(--text); border: 1px solid #e3e3ea; padding: 6px 10px; border-radius: 8px; }
+.nav-menu { list-style: none; margin: 0; padding: 0; display: flex; gap: 22px; align-items: center; }
+.nav-menu a { color: var(--text); text-decoration: none; font-weight: 600; opacity: .9; position: relative; padding-bottom: 10px; }
+.nav-menu a.active { color: var(--gold); }
+.nav-menu a.active::after { content: ""; position: absolute; left: 0; right: 0; bottom: 2px; height: 3px; background: var(--gold); border-radius: 2px; }
+.nav-menu a:hover { color: #111; }
+
+.btn { display: inline-block; padding: 10px 16px; border-radius: 999px; border: 1px solid #e3e3ea; text-decoration: none; color: var(--text); transition: transform .15s ease, background .2s ease, color .2s ease, box-shadow .2s ease; }
+.btn:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0,0,0,.12); }
+.btn-gold { background: var(--gold); color: #fff; border-color: var(--gold); }
+.btn-gold:hover { background: var(--gold-2); }
+.btn-outline { background: transparent; color: var(--text); }
+.btn-block { width: 100%; text-align: center; }
+
+/* Hero */
+.hero { position: relative; min-height: 72vh; display: grid; place-items: center; }
+.hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .85; pointer-events: none; }
+.hero-inner { position: relative; text-align: center; padding: 64px 0; }
+.hero h1 { font-family: "Playfair Display", serif; font-size: clamp(42px, 6vw, 68px); line-height: 1.1; margin: 0 0 12px; color: #111; }
+.glow { color: #111; text-shadow: none; }
+.hero p { color: var(--muted); margin: 0 auto 22px; max-width: 820px; }
+.hero-cta { display: flex; gap: 12px; justify-content: center; }
+.hero-gradient { display: none; }
+
+/* Sections */
+.section { padding: 64px 0; }
+.section-title { font-family: "Playfair Display", serif; font-size: 32px; margin: 0 0 24px; letter-spacing: .3px; }
+ /* Global reveal animation */
+ @keyframes pageFade { from { opacity: 0 } to { opacity: 1 } }
+ .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+ .reveal.visible { opacity: 1; transform: translateY(0); }
+ @media (prefers-reduced-motion: reduce) {
+   body { animation: none; }
+   .reveal { opacity: 1; transform: none; transition: none; }
+ }
+/* About showcase image */
+.about-photo { width: 360px; max-width: 100%; height: auto; border-radius: 12px; border: 2px solid var(--gold); background: #fff; box-shadow: var(--shadow); margin: 8px 0 16px; }
+
+/* Cards */
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.card { background: #fff; border: 1px solid #ececf2; border-radius: var(--radius); padding: 18px; box-shadow: var(--shadow); }
+.card h3 { margin: 0 0 6px; }
+.card p { margin: 0; color: var(--muted); }
+.card-img { width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 10px; margin-bottom: 10px; border: 1px solid rgba(212,175,55,.22); display: block; }
+
+/* Audience tabs */
+.tabs { display: inline-flex; gap: 8px; background: #f6f6f8; border: 1px solid #ececf2; padding: 6px; border-radius: 999px; }
+.tab { background: transparent; color: var(--text); border: none; padding: 8px 14px; border-radius: 999px; cursor: pointer; font-weight: 600; }
+.tab.active { background: #111; color: #fff; border: 1px solid #111; }
+.tab-panels { margin-top: 18px; }
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+.grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+.service-item { background: var(--bg-elev); border: 1px solid #ececf2; border-radius: var(--radius); padding: 16px; }
+.service-item h3 { margin: 0 0 10px; color: #111; }
+.service-item ul { margin: 0; padding-left: 18px; color: var(--muted); }
+
+/* Pricing */
+.pricing .price-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.price-card { background: #fff; border: 1px solid #ececf2; border-radius: var(--radius); padding: 18px; text-align: center; box-shadow: var(--shadow); }
+.price { font-size: 28px; margin: 8px 0 6px; color: #111; font-weight: 700; }
+/* Pricing menu images */
+.menu-images { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 14px; }
+.menu-images img { width: 100%; display: block; border: 1px solid #ececf2; border-radius: 12px; box-shadow: var(--shadow); background: #fff; }
+
+/* Gallery */
+.gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.tile { aspect-ratio: 4/3; border-radius: var(--radius-sm); overflow: hidden; border: 1px solid #ececf2; box-shadow: var(--shadow); background: #f7f7fb; }
+.gallery-img { width: 100%; height: 100%; object-fit: cover; display: block; filter: saturate(1.05) contrast(1.02); }
+
+/* Contact */
+.contact { position: relative; }
+.contact::before { content: ""; position: absolute; inset: 0; background: url('anhnen.jpg') center / cover fixed no-repeat; z-index: -2; }
+.contact::after { content: ""; position: absolute; inset: 0; background: rgba(255,255,255,.2); z-index: -1; }
+.contact > .container { position: relative; z-index: 1; }
+.contact .contact-grid { display: grid; grid-template-columns: 1.3fr 1fr 1.4fr; gap: 22px; align-items: start; }
+.contact-title { font-family: "Playfair Display", serif; font-size: 32px; margin: 0 0 12px; }
+.contact-logo { width: 120px; height: 120px; object-fit: cover; border-radius: 20px; box-shadow: var(--shadow); border: 1px solid #ececf2; display: block; margin-bottom: 10px; }
+.contact-row { margin: 6px 0; color: var(--muted); }
+.socials { display: flex; gap: 10px; margin-top: 10px; }
+.social { width: 36px; height: 36px; display: grid; place-items: center; border-radius: 50%; border: 1px solid #ececf2; color: #111; text-decoration: none; background: #fff; }
+.social:hover { background: #111; color: #fff; }
+.hours { margin: 0; padding-left: 18px; color: var(--muted); }
+.contact-map iframe { width: 100%; height: 260px; border: 1px solid #ececf2; border-radius: 12px; box-shadow: var(--shadow); }
+
+/* Booking */
+.booking-form { display: grid; gap: 14px; background: rgba(255,255,255,.02); border: 1px solid rgba(212,175,55,.18); padding: 16px; border-radius: var(--radius); box-shadow: var(--shadow); }
+.form-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+label { display: grid; gap: 6px; font-size: 14px; color: var(--muted); }
+input, select, textarea { background: var(--bg-elev); color: var(--text); border: 1px solid #e3e3ea; border-radius: 10px; padding: 10px 12px; font-family: inherit; font-size: 14px; }
+input:focus, select:focus, textarea:focus { outline: none; border-color: #111; box-shadow: 0 0 0 3px rgba(0,0,0,.12); }
+.form-msg { margin: 6px 0 0; min-height: 20px; font-size: 14px; }
+
+/* Footer */
+.site-footer { margin-top: 56px; border-top: 1px solid #e8e8ef; background: transparent; color: var(--text); }
+.footer-inner { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; padding: 24px 0; }
+.brand--footer .brand-mark { width: 34px; height: 34px; background: #f3f3f5; border: 1px solid #e8e8ef; }
+.footer-grid { display: grid; grid-template-columns: repeat(2, minmax(200px, 1fr)); gap: 12px; }
+.site-footer h4 { margin: 0 0 8px; color: var(--text); }
+.footer-bottom { text-align: center; color: var(--muted); border-top: 1px solid #e8e8ef; padding: 12px 0; font-size: 14px; }
+/* Footer info block */
+.footer-info{border-top:1px solid #e8e8ef;border-bottom:1px solid #e8e8ef;background:transparent}
+.footer-cols{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:32px;align-items:start;padding:24px 0}
+.footer-brand{display:flex;align-items:center;gap:12px}
+.footer-logo{width:44px;height:44px;border-radius:8px;border:1px solid #e3e3ea;object-fit:cover;background:#fff}
+.footer-title{font-family:"Playfair Display",serif;font-weight:700;margin:0}
+.muted{color:var(--muted)}
+/* Promo block */
+.promo{margin-top:28px;background:linear-gradient(180deg,#f7fbf4 0%,#f0f6ed 100%);border:1px solid rgba(212,175,55,.25);border-radius:18px;box-shadow:0 14px 32px rgba(0,0,0,.08);padding:24px}
+.promo-inner{display:grid;grid-template-columns:320px 1fr;gap:26px;align-items:center}
+.promo-img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:50%;border:6px solid #fff;box-shadow:0 12px 28px rgba(0,0,0,.14)}
+.promo-copy h3{margin:0 0 10px;font-family:"Playfair Display",serif;font-size:28px;color:#4f6b52}
+.promo-copy .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(212,175,55,.18);color:#4f6b52;font-weight:700;font-size:12px;letter-spacing:.8px;margin-bottom:10px}
+.promo-copy p{margin:6px 0;color:#4c5b4f;line-height:1.7}
+.promo-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+.btn-primary{background:var(--gold);color:#fff;border-color:var(--gold)}
+.btn-primary:hover{background:var(--gold-2)}
+
+/* Responsive - Mobile optimized */
+@media (max-width: 900px) {
+  body { padding-top: 60px; }
+  .site-header { padding: 8px 0; }
+  .brand-name { font-size: 18px; }
+  .hero { min-height: 60vh; }
+  .hero-inner { padding: 48px 0; }
+  .section { padding: 48px 0; }
+  .section-title { font-size: clamp(24px, 5vw, 32px); }
+  .cards { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .pricing .price-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .gallery-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .contact .contact-grid { grid-template-columns: 1fr 1fr; gap: 18px; }
+  .contact-title { font-size: clamp(22px, 4vw, 28px); }
+  .contact-logo { width: 100px; height: 100px; }
+  .footer-cols { grid-template-columns: 1fr 1fr; gap: 24px; }
+  .hero-cta { flex-wrap: wrap; gap: 10px; }
+  .btn { padding: 12px 20px; font-size: 15px; min-height: 44px; }
+  .promo-inner { grid-template-columns: 1fr; gap: 20px; text-align: center; }
+  .promo-img { max-width: 280px; margin: 0 auto; }
+  .promo-copy h3 { font-size: clamp(22px, 4vw, 26px); }
+}
+@media (max-width: 680px) {
+  body { padding-top: 56px; }
+  .site-header { padding: 6px 0; }
+  .header-inner { padding: 8px 0; }
+  .brand-logo { height: 32px; }
+  .brand-name { font-size: 16px; }
+  .nav-toggle { display: inline-block; padding: 8px 12px; min-width: 44px; min-height: 44px; }
+  .nav-menu { position: fixed; right: 4%; top: 56px; background: rgba(255,255,255,.99); border: 1px solid #e8e8ef; border-radius: 12px; padding: 12px; display: none; flex-direction: column; gap: 6px; width: min(280px, 92vw); box-shadow: 0 8px 24px rgba(0,0,0,.15); }
+  .nav-menu.open { display: flex; }
+  .nav-menu a { padding: 12px 16px; min-height: 44px; display: flex; align-items: center; }
+  .cards { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .card { padding: 14px; }
+  .pricing .price-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .price-card { padding: 14px; }
+  .gallery-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .form-row { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .contact .contact-grid { grid-template-columns: 1fr; gap: 16px; }
+  .contact-title { font-size: clamp(20px, 5vw, 24px); }
+  .contact-logo { width: 80px; height: 80px; }
+  .contact-row { font-size: 14px; }
+  .socials { gap: 8px; }
+  .social { width: 40px; height: 40px; }
+  .contact-map iframe { height: 200px; }
+  .footer-cols { grid-template-columns: 1fr 1fr; gap: 20px; }
+  .footer-inner { flex-direction: column; gap: 20px; }
+  .hero { min-height: 55vh; }
+  .hero h1 { font-size: clamp(28px, 7vw, 42px); }
+  .menu-images { grid-template-columns: 1fr; gap: 10px; }
+  .about-photo { width: 100%; max-width: 100%; }
+  .promo-inner { grid-template-columns: 1fr; gap: 16px; }
+  .promo-img { max-width: 240px; }
+  .promo-copy h3 { font-size: clamp(20px, 5vw, 24px); }
+  .promo-actions { flex-direction: column; }
+  .promo-actions .btn { width: 100%; }
+}
+@media (max-width: 480px) {
+  .cards, .pricing .price-grid, .gallery-grid, .grid { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .footer-cols { grid-template-columns: 1fr; }
+  .contact .contact-grid { grid-template-columns: 1fr; }
+  .contact-map iframe { height: 180px; }
+  .section { padding: 32px 0; }
+  .hero { min-height: 50vh; padding: 40px 0; }
+  .hero-cta { flex-direction: column; }
+  .hero-cta .btn { width: 100%; }
+}
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="#hero" class="brand" aria-label="5 STAR NAIL BAR">
+                <img class="brand-logo" src="logo.jpg" alt="5 STAR NAIL BAR">
+                <span class="brand-name">5 STAR NAIL BAR</span>
+            </a>
+            <nav class="nav" aria-label="Main">
+                <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">☰</button>
+                <ul id="nav-menu" class="nav-menu">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#lien-he">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero" class="hero">
+        <img class="hero-img" src="anhdautrang.jpg" alt="" aria-hidden="true">
+        <div class="container hero-inner reveal">
+            <h1><span class="glow">5 STAR</span> NAIL BAR</h1>
+            <p>Gold & black mysterious style. Celebrate your unique beauty.</p>
+            <div class="hero-cta">
+                <a href="https://abcapp.us/feedback/appointment?appid=v1vGJAi" target="_blank" rel="noopener noreferrer" class="btn btn-gold">Book Now</a>
+                <a href="#dich-vu" class="btn btn-outline">Explore Services</a>
+            </div>
+        </div>
+        <div class="hero-gradient" aria-hidden="true"></div>
+    </section>
+
+    <section id="gioi-thieu" class="section about">
+        <div class="container reveal">
+            <h2 class="section-title">About Us</h2>
+            <img src="logo.jpg" alt="Showcase image" class="about-photo">
+            <div style="color: var(--muted); max-width: 920px; margin: 0 auto; line-height: 1.7;">
+                <p>Pamper yourself with a deluxe nail care experience at 5 Star Nail Bar in Apopka, FL 32703. We’re dedicated to enhancing your beauty and providing a truly luxurious experience.</p>
+                <p><strong>Nail Designs:</strong> Nothing completes your look better than a fresh set of flawless nails. We offer an extensive selection of designs and hundreds of colors, from the simplest to the most intricate. Whatever your style, we’ve got you covered.</p>
+                <p><strong>Facilities:</strong> We take pride in providing a space to escape the busy world. Our calming decor helps you relax and unwind while our therapists perfect your nails. Sink into our cushy couches and pretty pillows for ultimate comfort.</p>
+                <p><strong>Punctuality:</strong> We value your time. Our meticulous approach and commitment to punctuality ensure exceptional service that surpasses your expectations.</p>
+                <p>Visit 5 Star Nail Bar us at 621 E Main St, Apopka, FL 32703 and enjoy your moment of relaxation and beauty. Book your appointment today and discover the difference at 5 Star Nail Bar!</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="dich-vu" class="section services">
+        <div class="container reveal">
+            <h2 class="section-title">Featured Services</h2>
+            <div class="cards">
+                <article class="card">
+                    <img class="card-img" src="w21.jpg" alt="Professional nail art">
+                    <h3>Professional Nail Art</h3>
+                    <p>Custom designs, long-lasting beauty, premium salon quality.</p>
+                </article>
+                <article class="card">
+                    <img class="card-img" src="w24.png" alt="Hand & skin care">
+                    <h3>Hand & Skin Care</h3>
+                    <p>Massage, exfoliation, moisturizing, restore natural glow.</p>
+                </article>
+                <article class="card">
+                    <img class="card-img" src="w25.png" alt="Relaxation combo">
+                    <h3>Relaxation Combo</h3>
+                    <p>60–90 minute sessions to balance mind and body.</p>
+                </article>
+            </div>
+            <div class="promo">
+                <div class="promo-inner">
+                    <img class="promo-img" src="q8.jpg" alt="Gift certificates and new owner promo">
+                    <div class="promo-copy">
+                        <span class="badge">EVENT & PROMO</span>
+                        <h3>Gift Certificates Available!</h3>
+                        <p>We’re pleased to say we are the <strong>NEW OWNER of 5 STAR NAIL BAR</strong>, with more passion for nails and extra dedication for our customers. Don’t miss out the hot promo! Visit us and get yourself pampered from tip to toe.</p>
+                        <div class="promo-actions">
+                            <a class="btn btn-primary" href="https://abcapp.us/feedback/appointment?appid=v1vGJAi" target="_blank" rel="noopener noreferrer">Book now</a>
+                            <a class="btn btn-outline" href="tel:+14077032373">Call (407) 703-2373</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="doi-tuong" class="section audience">
+        <div class="container reveal">
+            <h2 class="section-title">Services by Audience</h2>
+            <div class="tabs" role="tablist" aria-label="Select audience">
+                <button class="tab active" role="tab" aria-selected="true" aria-controls="tab-adults" id="tab-adults-btn">Adults</button>
+                <button class="tab" role="tab" aria-selected="false" aria-controls="tab-kids" id="tab-kids-btn">Kids</button>
+            </div>
+            <div class="tab-panels">
+                <div id="tab-adults" class="tab-panel active" role="tabpanel" aria-labelledby="tab-adults-btn">
+                    <div class="grid">
+                        <div class="service-item">
+                            <h3>Nail Services</h3>
+                            <ul>
+                                <li>Premium Manicure/ Pedicure</li>
+                                <li>Gel/ Acrylic/ Dip Powder</li>
+                                <li>Custom Nail Art Design</li>
+                            </ul>
+                        </div>
+                        <div class="service-item">
+                            <h3>Hand Care</h3>
+                            <ul>
+                                <li>Deep hand skin care</li>
+                                <li>Relaxing massage & moisturizing</li>
+                                <li>Skin restoration treatment</li>
+                            </ul>
+                        </div>
+                        <div class="service-item">
+                            <h3>Skin Care</h3>
+                            <ul>
+                                <li>Cleansing & hydrating facial</li>
+                                <li>Basic skin treatment</li>
+                                <li>Relaxation with essential oils</li>
+                            </ul>
+                        </div>
+                        <div class="service-item">
+                            <h3>Nail Care</h3>
+                            <ul>
+                                <li>Cuticle care, shaping, buffing</li>
+                                <li>Nail strengthening treatment</li>
+                                <li>Damaged nail restoration</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab-kids" class="tab-panel" role="tabpanel" aria-labelledby="tab-kids-btn">
+                    <div class="grid">
+                        <div class="service-item">
+                            <h3>Nail Polish (Kids)</h3>
+                            <ul>
+                                <li>Safe, non-toxic nail polish</li>
+                                <li>Cute, vibrant designs</li>
+                            </ul>
+                        </div>
+                        <div class="service-item">
+                            <h3>Nail Care</h3>
+                            <ul>
+                                <li>Gentle cleaning</li>
+                                <li>Kid-friendly nourishing treatment</li>
+                            </ul>
+                        </div>
+                        <div class="service-item">
+                            <h3>Facial Care</h3>
+                            <ul>
+                                <li>Gentle cleansing</li>
+                                <li>Natural face mask</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="bang-gia" class="section pricing">
+        <div class="container reveal">
+            <h2 class="section-title">Price Guide</h2>
+            <div class="price-grid">
+                <div class="price-card">
+                    <h3>Manicure Gel</h3>
+                    <p class="price">$45</p>
+                    <p>Cleaning, shaping, premium gel polish.</p>
+                </div>
+                <div class="price-card">
+                    <h3>Pedicure Deluxe</h3>
+                    <p class="price">$65</p>
+                    <p>Mineral salt soak, exfoliation, massage.</p>
+                </div>
+                <div class="price-card">
+                    <h3>Facial Glow</h3>
+                    <p class="price">$80</p>
+                    <p>Deep cleansing, hydration, relaxing massage.</p>
+                </div>
+                <div class="price-card">
+                    <h3>Kids Polish</h3>
+                    <p class="price">$20</p>
+                    <p>Safe polish for kids, cute designs.</p>
+                </div>
+            </div>
+            <div class="menu-images reveal">
+                <img src="menu.png" alt="Service menu 1">
+                <img src="menu2.png" alt="Service menu 2">
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="section blog">
+        <div class="container reveal">
+            <h2 class="section-title">Blog</h2>
+            <div class="cards">
+                <article class="card">
+                    <h3>Home Nail Care Tips</h3>
+                    <p>Small habits that help keep nails healthy and shiny.</p>
+                </article>
+                <article class="card">
+                    <h3>Nail Trends 2025</h3>
+                    <p>Standout colors and styles for the new season.</p>
+                </article>
+                <article class="card">
+                    <h3>Choosing the Right Service</h3>
+                    <p>Tips for choosing manicure/pedicure, gel, or skin care.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="thu-vien" class="section gallery">
+        <div class="container reveal">
+            <h2 class="section-title">Design Gallery</h2>
+            <div id="gallery" class="gallery-grid"></div>
+        </div>
+    </section>
+
+    <section id="lien-he" class="section contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-brand">
+                    <img class="contact-logo" src="w21.jpg" alt="5 STAR NAIL BAR logo">
+                    <h2 class="contact-title">Contact</h2>
+                    <p class="contact-row">☎ (407) 703-2373</p>
+                    <p class="contact-row">📍 621 E MAIN ST, APOPKA, FL 32703</p>
+                    <div class="socials">
+                        <a href="https://www.facebook.com/5starnailbarapopka" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M13 3h4a1 1 0 0 1 1 1v3h-3c-.55 0-1 .45-1 1v3h4l-1 4h-3v9h-4v-9H7v-4h3V8.5A5.5 5.5 0 0 1 15.5 3H17"/></svg>
+                        </a>
+                        <a href="https://www.google.com/search?q=5+Star+Nail+Bar+Apopka+FL+32703&ludocid=6332876811964097371&lsig=AB86z5VWB0qkQeEKSFLA_2hWEz7v" target="_blank" rel="noopener noreferrer" aria-label="Google" class="social">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+                                <path d="M12 2a10 10 0 1 0 0 20c5.2 0 9.5-3.9 9.5-9 0-.6-.1-1.1-.2-1.6h-9.3v3h5.4c-.3 1.7-1.9 3-3.9 3-2.3 0-4.1-1.8-4.1-4.1S11.7 9 14 9c1 0 1.9.4 2.5 1l2-2.1C17.5 6.9 15.9 6 14 6c-3.3 0-6 2.5-6 5.9s2.7 6.1 6.1 6.1c3.5 0 6-2.4 6-5.8 0-.4-.1-.9-.1-1.2L12 10.9V8.4h9.5c.1.5.2 1 .2 1.6 0 5.5-4.3 10-9.7 10A10 10 0 1 1 12 2Z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-hours">
+                    <h2 class="contact-title">Business Hours</h2>
+                    <ul class="hours">
+                        <li>Mon - Sat: 9 AM - 7 PM</li>
+                        <li>Sun: 11AM - 5PM</li>
+                    </ul>
+                </div>
+                <div class="contact-map">
+                    <iframe title="Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.1234567890!2d-81.4977491!3d28.6741252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e7774a9298abe1%3A0x57e2e5e84f6da35b!2s5%20Star%20Nail%20Bar!5e0!3m2!1sen!2sus!4v1736380800000!5m2!1sen!2sus" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="dat-lich" class="section booking">
+        <div class="container" style="text-align: center;">
+            <h2 class="section-title">Book Appointment</h2>
+            <p style="color: var(--muted); margin-bottom: 24px; max-width: 600px; margin-left: auto; margin-right: auto;">Ready to pamper yourself? Click below to book your appointment online.</p>
+            <a href="https://abcapp.us/feedback/appointment?appid=v1vGJAi" target="_blank" rel="noopener noreferrer" class="btn btn-gold" style="font-size: 18px; padding: 14px 32px; min-width: 200px;">Booking Now</a>
+        </div>
+    </section>
+
+    <section class="footer-info">
+        <div class="container footer-cols">
+            <div>
+                <div class="footer-brand">
+                    <img src="logo.jpg" alt="5 STAR NAIL BAR" class="footer-logo">
+                    <h3 class="footer-title">5 STAR NAIL BAR</h3>
+                </div>
+                <p class="muted">Looking for the best nail salon near you in Apopka, FL 32703 where you feel truly pampered? 5 Star Nail Bar 32703 welcomes you with a warm smile and a relaxing atmosphere. Enjoy top-quality service at affordable prices. Call (407) 703-2373 or book online now!</p>
+                <p class="muted">Fancy being healthy, pretty, and happy? Visit: Nail Salon in Apopka, FL 32703 | Nail Salon FL 32703 today.</p>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <p class="muted">621 E MAIN ST, APOPKA, FL 32703</p>
+                <p class="muted">Phone: (407) 703-2373</p>
+                <p class="muted">Email: thilanhle160988@gmail.com</p>
+            </div>
+            <div>
+                <h4>Business Hours</h4>
+                <p class="muted">Mon - Sat: 9 AM - 7 PM</p>
+                <p class="muted">Sun: 11AM - 5PM</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+         <div class="container footer-inner reveal">
+            <div>
+                <div class="brand brand--footer">
+                    <img class="brand-logo" src="logo.jpg" alt="5 STAR NAIL BAR">
+                    <span class="brand-name">5 STAR NAIL BAR</span>
+                </div>
+                <p>Looking for the best nail salon near you in Apopka, FL 32703 where you feel truly pampered? 5 Star Nail Bar 32703 welcomes you with a warm smile and a relaxing atmosphere. Enjoy top-quality service at affordable prices. Call (407) 703-2373 or book online now!</p>
+            </div>
+            <div class="footer-grid">
+                <div>
+                    <h4>Contact</h4>
+                    <p>621 E MAIN ST, APOPKA, FL 32703</p>
+                    <p>Phone: (407) 703-2373</p>
+                    <p>Email: thilanhle160988@gmail.com</p>
+                </div>
+                <div>
+                    <h4>Business Hours</h4>
+                    <p>Mon - Sat: 9 AM - 7 PM</p>
+                    <p>Sun: 11AM - 5PM</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">© <span id="year"></span> 5 STAR NAIL BAR. Designed by SongLang.</div>
+    </footer>
+
+    <script>
+// Navigation toggle
+const navToggle = document.querySelector('.nav-toggle');
+const navMenu = document.getElementById('nav-menu');
+if (navToggle && navMenu) {
+  navToggle.addEventListener('click', () => {
+    const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+    navToggle.setAttribute('aria-expanded', String(!expanded));
+    navMenu.classList.toggle('open');
+  });
+}
+
+// Smooth anchor scroll
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', (e) => {
+    const id = a.getAttribute('href').slice(1);
+    const el = document.getElementById(id);
+    if (el) {
+      e.preventDefault();
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      navMenu?.classList.remove('open');
+      navToggle?.setAttribute('aria-expanded', 'false');
+    }
+  });
+});
+
+// Tabs: Adults vs Kids
+const tabAdultsBtn = document.getElementById('tab-adults-btn');
+const tabKidsBtn = document.getElementById('tab-kids-btn');
+const tabAdults = document.getElementById('tab-adults');
+const tabKids = document.getElementById('tab-kids');
+
+function setActiveTab(type) {
+  const isAdults = type === 'adults';
+  tabAdultsBtn?.classList.toggle('active', isAdults);
+  tabKidsBtn?.classList.toggle('active', !isAdults);
+  tabAdults?.classList.toggle('active', isAdults);
+  tabKids?.classList.toggle('active', !isAdults);
+  tabAdultsBtn?.setAttribute('aria-selected', String(isAdults));
+  tabKidsBtn?.setAttribute('aria-selected', String(!isAdults));
+}
+
+tabAdultsBtn?.addEventListener('click', () => setActiveTab('adults'));
+tabKidsBtn?.addEventListener('click', () => setActiveTab('kids'));
+
+// Gallery render (edit paths below to update images)
+const GALLERY_IMAGES = [
+  'w1.png',
+  'w2.png',
+  'w3.png',
+  'w4.png',
+  'w5.png',
+  'w6.png'
+];
+const galleryEl = document.getElementById('gallery');
+if (galleryEl) {
+  galleryEl.innerHTML = GALLERY_IMAGES.map((src, i) => (
+    `<figure class="tile"><img class="gallery-img" src="${src}" alt="Nail design ${i+1}" loading="lazy"></figure>`
+  )).join('');
+}
+
+
+// Footer year & PWA registration
+const yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
+// Register service worker
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js').catch(() => {});
+  });
+}
+
+// Reveal on scroll for a pleasant page-wide animation
+const toReveal = document.querySelectorAll('.reveal, .card, .price-card, .service-item, .tile, .contact-grid > *');
+const io = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      io.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+toReveal.forEach(el => io.observe(el));
+
+// Active underline for nav links while viewing section
+const navLinks = document.querySelectorAll('.nav-menu a[href^="#"]');
+function setActiveLinkByHash(hash){
+  navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === hash));
+}
+navLinks.forEach(link => {
+  link.addEventListener('click', () => setActiveLinkByHash(link.getAttribute('href')));
+});
+// Observe sections corresponding to hash links
+const sections = Array.from(navLinks).map(l => document.querySelector(l.getAttribute('href'))).filter(Boolean);
+const ioNav = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) setActiveLinkByHash('#'+e.target.id); });
+}, {threshold: 0.55});
+sections.forEach(sec => ioNav.observe(sec));
+    </script>
+</body>
+</html>
+
+

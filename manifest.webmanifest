@@ -1,0 +1,25 @@
+{
+  "name": "Aurora Nails",
+  "short_name": "AuroraNails",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#0b0b0e",
+  "theme_color": "#0b0b0e",
+  "description": "Salon nail vàng kim & đen huyền bí - Người lớn & Trẻ em",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
+
+

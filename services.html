@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
+    <title>Services | 5 STAR NAIL BAR</title>
+    <meta name="description" content="Service menu of 5 STAR NAIL BAR.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="logo.jpg" type="image/jpeg">
+    <style>
+    :root{--bg:#ffffff;--text:#171717;--muted:#5b5b67;--container:1120px;--gold:#d4af37;--gold-2:#b88a2e}
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:#ffffff url('anhnen.jpg') center/cover no-repeat;background-attachment:fixed;color:var(--text);font-family:Montserrat,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6;position:relative;display:flex;flex-direction:column;min-height:100vh}
+    @media(max-width:680px){body{background-attachment:scroll}}
+    body::before{content:"";position:fixed;inset:0;background:#fff;opacity:1;z-index:0;pointer-events:none}
+    .container{width:min(var(--container),92%);margin:0 auto}
+    .site-header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.85);backdrop-filter:blur(8px);border-bottom:1px solid #e8e8ef}
+    body{padding-top:64px}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:var(--text)}
+    .brand-logo{height:38px;width:auto;border:1px solid #e3e3ea;border-radius:8px;background:#fff}
+    .brand-name{font-family:"Playfair Display",serif;font-weight:700;font-size:20px}
+    .nav-menu{list-style:none;margin:0;padding:0;display:flex;gap:22px;align-items:center}
+    .nav-menu a{color:var(--text);text-decoration:none;font-weight:600;position:relative;padding-bottom:10px}
+    .nav-menu a.active{color:var(--gold)}
+    .nav-menu a.active::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:3px;background:var(--gold);border-radius:2px}
+    .section{padding:48px 0;position:relative;z-index:1}
+    .section-title{font-family:"Playfair Display",serif;font-size:32px;margin:0 0 18px}
+    .menus{display:grid;gap:16px;grid-template-columns:1fr 1fr}
+    .menu-img{width:100%;border:1px solid #ececf2;border-radius:12px;box-shadow:0 10px 24px rgba(0,0,0,.08);background:#fff;display:block}
+    .section-lead{color:var(--muted);margin:4px 0 18px;font-size:15px}
+    .service-menu{background:linear-gradient(180deg,#ffffff 0%,#faf7ee 100%);border-top:1px solid rgba(212,175,55,.28);border-bottom:1px solid rgba(212,175,55,.28)}
+    .service-cards{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+    .service-card{background:#fff;border:1.2px solid rgba(212,175,55,.35);border-top:4px solid var(--gold);border-radius:16px;padding:24px;box-shadow:0 12px 26px rgba(0,0,0,.08);transition:transform .18s ease,box-shadow .2s ease,border-color .2s ease}
+    .service-card:hover{transform:translateY(-4px);box-shadow:0 18px 32px rgba(0,0,0,.12);border-color:rgba(212,175,55,.55)}
+    .service-img{width:100%;height:190px;border-radius:12px;object-fit:cover;margin-bottom:12px;border:1px solid rgba(212,175,55,.28);box-shadow:0 8px 18px rgba(0,0,0,.08)}
+    .service-card h3{margin:0 0 12px;font-family:"Playfair Display",serif;font-size:24px;color:#111}
+    .price-line{display:flex;justify-content:space-between;gap:12px;font-weight:700;color:#111;margin:6px 0}
+    .duration{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--gold-2);background:rgba(212,175,55,.14);border:1px solid rgba(212,175,55,.32);border-radius:999px;padding:6px 12px;margin:2px 0 10px;width:max-content}
+    .service-desc{color:var(--muted);line-height:1.6;margin:10px 0}
+    .service-includes{list-style:none;padding:0;margin:10px 0}
+    .service-includes li{padding:6px 0;padding-left:18px;position:relative;color:var(--muted);font-size:14px}
+    .service-includes li:before{content:"–";position:absolute;left:0;color:#111;font-weight:700}
+    .extra-services{background:#f6f6f8;border:1.2px solid rgba(212,175,55,.35);border-radius:14px;padding:24px;margin-top:24px;box-shadow:0 12px 26px rgba(0,0,0,.08)}
+    .extra-services h3{margin:0 0 16px;font-family:"Playfair Display",serif;font-size:24px;color:#111}
+    .extra-list{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+    .extra-list li{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px solid #ececf2;color:var(--muted);font-size:14px}
+    .extra-list li:last-child{border-bottom:none}
+    .extra-list li strong{color:#111}
+    /* Booking CTA */
+    .cta{margin:36px 0;padding:28px 24px;border:1.2px solid rgba(212,175,55,.35);border-radius:16px;box-shadow:0 12px 26px rgba(0,0,0,.08);background:linear-gradient(135deg,#fff 0%,#faf7ee 100%)}
+    .cta h2{margin:0 0 10px;font-family:"Playfair Display",serif;font-size:26px;color:#111}
+    .cta p{margin:0 0 16px;color:var(--muted)}
+    .cta-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:999px;border:1px solid rgba(212,175,55,.35);font-weight:700;text-decoration:none;cursor:pointer;transition:transform .15s ease,box-shadow .15s ease,background .15s ease,color .15s ease}
+    .btn:hover{transform:translateY(-2px);box-shadow:0 10px 20px rgba(0,0,0,.1)}
+    .btn-primary{background:var(--gold);color:#fff;border-color:var(--gold)}
+    .btn-primary:hover{background:var(--gold-2)}
+    .btn-outline{background:#fff;color:#111}
+    /* Contact */
+    .contact{position:relative;padding:48px 0}
+    .contact::before{content:"";position:absolute;inset:0;background:url('anhnen.jpg') center/cover fixed no-repeat;z-index:-2;opacity:.25}
+    .contact::after{content:"";position:absolute;inset:0;background:rgba(255,255,255,.35);z-index:-1}
+    .contact>.container{position:relative;z-index:1}
+    .contact .contact-grid{display:grid;grid-template-columns:1.3fr 1fr 1.4fr;gap:22px;align-items:start}
+    .contact-title{font-family:"Playfair Display",serif;font-size:32px;margin:0 0 12px}
+    .contact-logo{width:120px;height:120px;object-fit:cover;border-radius:20px;box-shadow:0 10px 24px rgba(0,0,0,.08);border:1px solid #ececf2;display:block;margin-bottom:10px}
+    .contact-row{margin:6px 0;color:var(--muted)}
+    .socials{display:flex;gap:10px;margin-top:10px}
+    .social{width:36px;height:36px;display:grid;place-items:center;border-radius:50%;border:1px solid #e3e3ea;color:#111;text-decoration:none;background:#fff}
+    .social:hover{background:#111;color:#fff}
+    .hours{margin:0;padding-left:18px;color:var(--muted)}
+    .contact-map iframe{width:100%;height:260px;border:1px solid #e3e3ea;border-radius:12px;box-shadow:0 10px 24px rgba(0,0,0,.08)}
+    /* Lightbox */
+    .lightbox-backdrop{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.78);z-index:2000;padding:18px}
+    .lightbox-backdrop.open{display:flex}
+    .lightbox-backdrop img{max-width:90vw;max-height:90vh;border-radius:14px;box-shadow:0 20px 40px rgba(0,0,0,.35);background:#fff}
+    .nav-toggle{display:none;background:transparent;color:var(--text);border:1px solid #e3e3ea;padding:8px 12px;border-radius:8px;cursor:pointer;min-width:44px;min-height:44px}
+    @media(max-width:900px){
+      .menus{grid-template-columns:1fr}
+      .service-cards{grid-template-columns:1fr}
+      body{padding-top:60px}
+      .section{padding:40px 0}
+      .section-title{font-size:clamp(24px,5vw,32px)}
+      .contact .contact-grid{grid-template-columns:1fr 1fr;gap:18px}
+      .contact-title{font-size:clamp(22px,4vw,28px)}
+      .contact-logo{width:100px;height:100px}
+      .service-category{margin-bottom:32px}
+      .service-card{padding:16px}
+      .cta{padding:24px 20px}
+      .cta h2{font-size:clamp(22px,4vw,24px)}
+    }
+    @media(max-width:680px){
+      body{padding-top:56px}
+      .site-header{padding:6px 0}
+      .brand-logo{height:32px}
+      .brand-name{font-size:16px}
+      .nav-toggle{display:inline-block}
+      .nav-menu{position:fixed;right:4%;top:56px;background:rgba(255,255,255,.99);border:1px solid #e8e8ef;border-radius:12px;padding:12px;display:none;flex-direction:column;gap:6px;width:min(280px,92vw);box-shadow:0 8px 24px rgba(0,0,0,.15)}
+      .nav-menu.open{display:flex}
+      .nav-menu a{padding:12px 16px;min-height:44px;display:flex;align-items:center}
+      .section{padding:32px 0}
+      .contact .contact-grid{grid-template-columns:1fr;gap:16px}
+      .contact-title{font-size:clamp(20px,5vw,24px)}
+      .contact-logo{width:80px;height:80px}
+      .contact-row{font-size:14px}
+      .socials{gap:8px}
+      .social{width:40px;height:40px}
+      .contact-map iframe{height:200px}
+      .service-card{padding:14px}
+      .service-img{height:180px}
+      .price-line{font-size:14px;padding:6px 0}
+      .cta{padding:20px 16px}
+      .cta-actions{flex-direction:column}
+      .cta-actions .btn{width:100%}
+    }
+    .footer-bottom{text-align:center;color:#333;border-top:1px solid #e8e8ef;padding:16px 0;font-size:14px;font-weight:600;position:relative;z-index:1}
+    .footer-info{border-top:1px solid #e8e8ef;border-bottom:1px solid #e8e8ef;background:transparent;position:relative;z-index:1}
+    .footer-cols{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:32px;align-items:start;padding:24px 0}
+    .footer-brand{display:flex;align-items:center;gap:12px}
+    .footer-logo{width:44px;height:44px;border-radius:8px;border:1px solid #e3e3ea;object-fit:cover;background:#fff}
+    .footer-title{font-family:"Playfair Display",serif;font-weight:700;margin:0}
+    .muted{color:var(--muted)}
+    @media(max-width:680px){.footer-cols{grid-template-columns:1fr 1fr;gap:20px}}
+    @media(max-width:480px){
+      .footer-cols{grid-template-columns:1fr}
+      .contact .contact-grid{grid-template-columns:1fr}
+      .contact-map iframe{height:180px}
+      .section{padding:28px 0}
+      .service-card{padding:12px}
+      .service-img{height:160px}
+      .service-category h2{font-size:clamp(20px,5vw,22px)}
+      .category-desc{font-size:14px}
+    }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html#hero" class="brand" aria-label="5 STAR NAIL BAR">
+                <img class="brand-logo" src="logo.jpg" alt="5 STAR NAIL BAR">
+                <span class="brand-name">5 STAR NAIL BAR</span>
+            </a>
+            <nav class="nav" aria-label="Main">
+                <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">☰</button>
+                <ul id="nav-menu" class="nav-menu">
+                    <li><a href="index.html#hero">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="index.html#blog">Blog</a></li>
+                    <li><a href="index.html#lien-he">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="section service-menu">
+        <div class="container">
+            <h1 class="section-title">Service Menu</h1>
+            <p class="section-lead">Premium services with transparent pricing. Pick your favorite look and relax.</p>
+            <div class="service-cards">
+                <div class="service-card">
+                    <img class="service-img" src="w13.png" alt="Manicure service">
+                    <h3>Manicure</h3>
+                    <p class="service-desc"><strong>Note:</strong> All manicures include a natural cleaning-up with a polish of choice on real nails that would last 3-7 days.</p>
+                    <div class="price-line"><span>Manicure</span><span>$20</span></div>
+                    <div class="price-line"><span>Manicure w/Gel</span><span>$35</span></div>
+                </div>
+
+                <div class="service-card">
+                    <img class="service-img" src="w1.png" alt="Spa pedicure service">
+                    <h3>SPA PEDICURE / Gel</h3>
+                    <div class="price-line"><span>Spa Pedicure / Gel</span><span>$33 / $48</span></div>
+                    <p class="duration">(30 Min)</p>
+                    <p class="service-desc">Includes: Soaking in a whirlpool spa with warm water. Toe nails shaping, foot scrub gel, lotion & massage, polish.</p>
+                </div>
+
+                <div class="service-card">
+                    <img class="service-img" src="w2.png" alt="Deluxe spa pedicure">
+                    <h3>DELUXE SPA PEDICURE / Gel</h3>
+                    <div class="price-line"><span>Deluxe Spa Pedicure / Gel</span><span>$43 / $58</span></div>
+                    <p class="duration">(40 Min)</p>
+                    <p class="service-desc">The rejuvenating treatment helps increase circulation and provides the ultimate relief for stress and aching muscles. This is the cleanest and most hygienic spa pedicure solution enriched with key ingredients to give feet the nutrition they need.</p>
+                    <p class="service-desc" style="margin-top:12px;font-weight:600;color:#111;">The package includes:</p>
+                    <ul class="service-includes">
+                        <li>Nail trimming, shaping & buffing, cuticle removal</li>
+                        <li>Callus deep treatment</li>
+                        <li>Sea salt scrub exfoliation</li>
+                        <li>Firming mask</li>
+                        <li>Massage</li>
+                        <li>Hot towel & your choice of polish</li>
+                    </ul>
+                    <p class="service-desc"><strong>Your choice of sugar scrub and mask:</strong> Sweet Lavender Dreams, Spearmint Eucalyptus, or Honey Pearl.</p>
+                </div>
+
+                <div class="service-card">
+                    <img class="service-img" src="w3.png" alt="Luxury spa pedicure">
+                    <h3>LUXURY SPA PEDICURE / Gel</h3>
+                    <div class="price-line"><span>Luxury Spa Pedicure / Gel</span><span>$53 / $68</span></div>
+                    <p class="duration">(50 Min)</p>
+                    <p class="service-desc">A delicious fragrant treatment. This pedicure utilizes lime zest derived enzymes along with fruit acids designed to gently remove dead skin cells and callouses. This enzyme removes the top layer of skin, leaving younger smoother skin for uniform pigmentation. The foot massage is followed by an aromatherapy luxury lotion which helps repair dry damaged skin.</p>
+                    <p class="service-desc" style="margin-top:12px;font-weight:600;color:#111;">The package includes:</p>
+                    <ul class="service-includes">
+                        <li>Soaking with sea salt</li>
+                        <li>Nail trimming, shaping & buffing, cuticle removal</li>
+                        <li>Callus deep treatment</li>
+                        <li>Sugar scrub exfoliation</li>
+                        <li>Firming mask</li>
+                        <li>Massage cream</li>
+                        <li>Hot towel & polish</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <img class="service-img" src="w4.png" alt="Collagen spa pedicure">
+                    <h3>COLLAGEN SPA PEDICURE / Gel</h3>
+                    <div class="price-line"><span>Collagen Spa Pedicure / Gel</span><span>$58 / $73</span></div>
+                    <p class="duration">(55 Min)</p>
+                    <p class="service-desc">Treat your feet to the secret to an unforgettable spa-like experience that incorporates collagen-rich products to hydrate and rejuvenate the skin on your feet. Collagen boosts hydration and nourishment.</p>
+                    <p class="service-desc" style="margin-top:12px;font-weight:600;color:#111;">The package includes:</p>
+                    <ul class="service-includes">
+                        <li>Detox soaking with sea salt</li>
+                        <li>Nail trimming, shaping & buffing, cuticle removal</li>
+                        <li>Callus deep treatment</li>
+                        <li>Paraffin wax</li>
+                        <li>Sugar scrub exfoliation</li>
+                        <li>Firming mask</li>
+                        <li>Collagen cream massage</li>
+                        <li>Collagen Socks</li>
+                        <li>Hot towel & polish</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <img class="service-img" src="w5.png" alt="Volcano spa pedicure">
+                    <h3>VOLCANO SPA PEDICURE / Gel</h3>
+                    <div class="price-line"><span>Volcano Spa Pedicure / Gel</span><span>$63 / $78</span></div>
+                    <p class="duration">(60 Min)</p>
+                    <p class="service-desc">Luxurious pedicure with rich formulas including collagen masks and lotion to revive and moisturize even the driest skin.</p>
+                    <p class="service-desc" style="margin-top:12px;font-weight:600;color:#111;">The package includes:</p>
+                    <ul class="service-includes">
+                        <li>Detox soaking with sea salt</li>
+                        <li>Nail trimming, shaping & buffing, cuticle removal</li>
+                        <li>Callus deep treatment</li>
+                        <li>Paraffin wax</li>
+                        <li>Sugar scrub exfoliation</li>
+                        <li>Firming mask</li>
+                        <li>Collagen cream massage</li>
+                        <li>Warm paraffin treatment</li>
+                        <li>Hot towel & polish</li>
+                    </ul>
+                    <p class="service-desc"><strong>Your choice of spa package:</strong> Honey Pearl, Lavender Eruption, Orange, Green Tea & Aloe Vera, Lemongrass & Ginger, Honeysuckle, Jasmine, Acacia, or Tropical Citrus.</p>
+                </div>
+
+                <div class="service-card">
+                    <img class="service-img" src="w6.png" alt="Volcano hot stone pedicure">
+                    <h3>VOLCANO HOT STONE PEDICURE / Gel</h3>
+                    <div class="price-line"><span>Volcano Hot Stone Pedicure / Gel</span><span>$75 / $90</span></div>
+                    <p class="duration">(60 Min)</p>
+                    <p class="service-desc">Detoxes and exfoliates leaving skin silky soft. Includes sugar scrub, special oils collagen mask & lotion, and hot paraffin wax treatment to revitalize your skin.</p>
+                    <p class="service-desc" style="margin-top:12px;font-weight:600;color:#111;">The package includes:</p>
+                    <ul class="service-includes">
+                        <li>Detox soaking with sea salt</li>
+                        <li>Nail trimming, shaping & buffing, cuticle removal</li>
+                        <li>Callus deep treatment</li>
+                        <li>Sugar scrub exfoliation</li>
+                        <li>Soothe mask</li>
+                        <li>Collagen cream massage</li>
+                        <li>Hot stone therapy massage</li>
+                        <li>Warm paraffin treatment</li>
+                        <li>Hot towel & polish</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <img class="service-img" src="w7.png" alt="Organic herbal spa pedicure">
+                    <h3>ORGANIC HERBAL SPA PEDICURE</h3>
+                    <div class="price-line"><span>Organic Herbal Spa Pedicure</span><span>$85</span></div>
+                    <p class="duration">(65 Min)</p>
+                    <ul class="service-includes">
+                        <li>Warm Neck pillow</li>
+                        <li>Sea salt soak with Organic Herbal Sea Salt</li>
+                        <li>Organic Herbal Sugar Scrub (herbal gel & oil)</li>
+                        <li>Organic Herbal Mask with hot towels</li>
+                        <li>Organic Herbal Cream to replenish dry skin</li>
+                        <li>Paraffin soak after callus removal</li>
+                        <li>Massage: 25 minutes foot massage with organic lotion & hot stone</li>
+                        <li>Polish</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <img class="service-img" src="w8.png" alt="Add on services">
+                    <h3>ADD ON</h3>
+                    <ul class="extra-list">
+                        <li><span>Callus Treatment</span><strong>$5</strong></li>
+                        <li><span>Gel Polish Add On</span><strong>$15</strong></li>
+                        <li><span>10 Minute Massage</span><strong>$10</strong></li>
+                        <li><span>Paraffin Treatment</span><strong>$10</strong></li>
+                        <li><span>French Add On</span><strong>$5</strong></li>
+                    </ul>
+                    <p class="service-desc" style="margin-top:10px"><strong>Term of Paraffin wax</strong></p>
+                    <div class="price-line"><span>Pedicure</span><span>$53</span></div>
+                    <div class="price-line"><span>Den Pedicure</span><span>$75</span></div>
+                </div>
+
+                <div class="service-card">
+                    <img class="service-img" src="w9.png" alt="Nail enhancement">
+                    <h3>NAIL ENHANCEMENT</h3>
+                    <p class="service-desc">The prettiest, durable & natural technique in the nail industry would last 2.5 weeks. A perfect choice for any nail length or nails with design.</p>
+                    <div class="price-line"><span>Acrylic Full Set</span><span>$40</span></div>
+                    <div class="price-line"><span>Acrylic Full Set w/Gel</span><span>$50</span></div>
+                    <div class="price-line"><span>Acrylic Fill In</span><span>$30</span></div>
+                    <div class="price-line"><span>Acrylic Fill In w/Gel</span><span>$40</span></div>
+                    <div class="price-line"><span>Pink & White Full Set</span><span>$55</span></div>
+                    <div class="price-line"><span>Pink & White Fill In</span><span>$50</span></div>
+                    <div class="price-line"><span>Pink Fill</span><span>$40</span></div>
+                    <div class="price-line"><span>Ombre Full Set</span><span>$60</span></div>
+                    <div class="price-line"><span>Color Powder</span><span>$50</span></div>
+                    <div class="price-line"><span>Builder Gel Full Set</span><span>$65</span></div>
+                    <div class="price-line"><span>Builder Gel Fill In</span><span>$55</span></div>
+                    <div class="price-line"><span>French Add On</span><span>$5</span></div>
+                </div>
+
+                <div class="service-card">
+                    <img class="service-img" src="w10.png" alt="Dipping powder">
+                    <h3>DIPPING POWDER</h3>
+                    <p class="service-desc">A durable, natural choice for short nails, with 4 layers of powder dip that can last 2 weeks or more. Dipping requires soaking off and starting fresh during each visit.</p>
+                    <div class="price-line"><span>Color Dipping</span><span>$45</span></div>
+                    <div class="price-line"><span>Pink & White Dipping</span><span>$55</span></div>
+                    <div class="price-line"><span>Ombre Dipping</span><span>$60</span></div>
+                    <div class="price-line"><span>Stiletto / Coffin / Almond</span><span>$5</span></div>
+                    <div class="price-line"><span>Remove Dip & Reset</span><span>$5</span></div>
+                </div>
+
+                <div class="service-card">
+                    <img class="service-img" src="w11.png" alt="Acrylic toe">
+                    <h3>ACRYLIC TOE</h3>
+                    <p class="service-desc">An acrylic overlay on toes that supports the strength on the toes that would last 4 weeks or more.</p>
+                    <div class="price-line"><span>Natural Tips</span><span>$45</span></div>
+                    <div class="price-line"><span>Pink & White</span><span>$60</span></div>
+                    <div class="price-line"><span>Acrylic 1 Big Toe</span><span>$5</span></div>
+                </div>
+
+                <div class="service-card">
+                    <img class="service-img" src="w14.png" alt="Color change">
+                    <h3>COLOR CHANGE</h3>
+                    <div class="price-line"><span>Hand Polish</span><span>$13</span></div>
+                    <div class="price-line"><span>Toe Polish</span><span>$17</span></div>
+                    <div class="price-line"><span>Gel Color Change on Hand/Toe</span><span>$25</span></div>
+                </div>
+
+                <div class="service-card">
+                    <img class="service-img" src="w15.png" alt="Kids services">
+                    <h3>KID’S SERVICES (UNDER 12)</h3>
+                    <div class="price-line"><span>Princess Pedicure</span><span>$25</span></div>
+                    <p class="service-desc">Includes: Soaking in a whirlpool spa with warm water. Toe nails shaping, lotion & massage, foot scrub gel, polish.</p>
+                    <div class="price-line"><span>Pedicure</span><span>$25</span></div>
+                    <div class="price-line"><span>Manicure</span><span>$15</span></div>
+                    <div class="price-line"><span>Hand Polish</span><span>$7</span></div>
+                    <div class="price-line"><span>Toe Polish</span><span>$10</span></div>
+                    <div class="price-line"><span>French Add On</span><span>$5</span></div>
+                    <div class="price-line"><span>Gel Add On</span><span>$10</span></div>
+                </div>
+
+                <div class="service-card">
+                    <img class="service-img" src="w16.png" alt="Waxing services">
+                    <h3>WAXING</h3>
+                    <p class="service-desc">Avoid sunbathing 24h before & after waxing procedures.</p>
+                    <div class="price-line"><span>Eyebrows</span><span>$10</span></div>
+                    <div class="price-line"><span>Lip</span><span>$6</span></div>
+                    <div class="price-line"><span>Chin</span><span>$12</span></div>
+                    <div class="price-line"><span>Noise</span><span>$12</span></div>
+                    <div class="price-line"><span>Side Burns</span><span>$15</span></div>
+                    <div class="price-line"><span>Full Face</span><span>$40</span></div>
+                    <div class="price-line"><span>Under Arms</span><span>$20</span></div>
+                    <div class="price-line"><span>Full Arms</span><span>$40</span></div>
+                    <div class="price-line"><span>Hafl Arms</span><span>$25</span></div>
+                    <div class="price-line"><span>Full Legs</span><span>$75</span></div>
+                    <div class="price-line"><span>Bikini</span><span>$40</span></div>
+                    <div class="price-line"><span>Brazilian</span><span>$60</span></div>
+                </div>
+
+                <div class="service-card">
+                    <img class="service-img" src="w17.png" alt="Eyelashes services">
+                    <h3>EYELASHES</h3>
+                    <div class="price-line"><span>Strips Lashes</span><span>$25</span></div>
+                    <div class="price-line"><span>Cluster Lashes</span><span>$50</span></div>
+                    <div class="price-line"><span>Classic</span><span>$100</span></div>
+                    <div class="price-line"><span>Hybrid</span><span>$120</span></div>
+                    <div class="price-line"><span>Volume</span><span>$150</span></div>
+                    <div class="price-line"><span>Refill Eyelashes</span><span>$50 / $70</span></div>
+                    <div class="price-line"><span>Eyebrow Tinting</span><span>$20</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="cta">
+                <h2>Book your appointment today</h2>
+                <p>Ready for a refresh? Choose your service and schedule in seconds. We’ll prepare a cozy seat for you.</p>
+                <div class="cta-actions">
+                    <a class="btn btn-primary" href="https://abcapp.us/feedback/appointment?appid=v1vGJAi" target="_blank" rel="noopener noreferrer">Book online</a>
+                    <a class="btn btn-outline" href="tel:+14077032373">Call (407) 703-2373</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="lien-he" class="section contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-brand">
+                    <img class="contact-logo" src="w21.jpg" alt="5 STAR NAIL BAR logo">
+                    <h2 class="contact-title">Contact</h2>
+                    <p class="contact-row">☎ (407) 703-2373</p>
+                    <p class="contact-row">📍 621 E MAIN ST, APOPKA, FL 32703</p>
+                    <div class="socials">
+                        <a href="https://www.facebook.com/5starnailbarapopka" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M13 3h4a1 1 0 0 1 1 1v3h-3c-.55 0-1 .45-1 1v3h4l-1 4h-3v9h-4v-9H7v-4h3V8.5A5.5 5.5 0 0 1 15.5 3H17"/></svg>
+                        </a>
+                        <a href="https://www.google.com/search?q=5+Star+Nail+Bar+Apopka+FL+32703&ludocid=6332876811964097371&lsig=AB86z5VWB0qkQeEKSFLA_2hWEz7v" target="_blank" rel="noopener noreferrer" aria-label="Google" class="social">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+                                <path d="M12 2a10 10 0 1 0 0 20c5.2 0 9.5-3.9 9.5-9 0-.6-.1-1.1-.2-1.6h-9.3v3h5.4c-.3 1.7-1.9 3-3.9 3-2.3 0-4.1-1.8-4.1-4.1S11.7 9 14 9c1 0 1.9.4 2.5 1l2-2.1C17.5 6.9 15.9 6 14 6c-3.3 0-6 2.5-6 5.9s2.7 6.1 6.1 6.1c3.5 0 6-2.4 6-5.8 0-.4-.1-.9-.1-1.2L12 10.9V8.4h9.5c.1.5.2 1 .2 1.6 0 5.5-4.3 10-9.7 10A10 10 0 1 1 12 2Z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-hours">
+                    <h2 class="contact-title">Business Hours</h2>
+                    <ul class="hours">
+                        <li>Mon - Sat: 9 AM - 7 PM</li>
+                        <li>Sun: 11AM - 5PM</li>
+                    </ul>
+                </div>
+                <div class="contact-map">
+                    <iframe title="Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.1234567890!2d-81.4977491!3d28.6741252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e7774a9298abe1%3A0x57e2e5e84f6da35b!2s5%20Star%20Nail%20Bar!5e0!3m2!1sen!2sus!4v1736380800000!5m2!1sen!2sus" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="lightbox-backdrop" aria-hidden="true"><img alt=""></div>
+
+    <section class="footer-info">
+        <div class="container footer-cols">
+            <div>
+                <div class="footer-brand">
+                    <img src="logo.jpg" alt="5 STAR NAIL BAR" class="footer-logo">
+                    <h3 class="footer-title">5 STAR NAIL BAR</h3>
+                </div>
+                <p class="muted">Looking for the best nail salon near you in Apopka, FL 32703 where you feel truly pampered? 5 Star Nail Bar 32703 welcomes you with a warm smile and a relaxing atmosphere. Enjoy top-quality service at affordable prices. Call (407) 703-2373 or book online now!</p>
+                <p class="muted">Fancy being healthy, pretty, and happy? Visit: Nail Salon in Apopka, FL 32703 | Nail Salon FL 32703 today.</p>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <p class="muted">621 E MAIN ST, APOPKA, FL 32703</p>
+                <p class="muted">Phone: (407) 703-2373</p>
+                <p class="muted">Email: thilanhle160988@gmail.com</p>
+            </div>
+            <div>
+                <h4>Business Hours</h4>
+                <p class="muted">Mon - Sat: 9 AM - 7 PM</p>
+                <p class="muted">Sun: 11AM - 5PM</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer-bottom">© <span id="year"></span> 5 STAR NAIL BAR. Designed by SongLang.</div>
+
+    <script>
+    const yearEl=document.getElementById('year'); if(yearEl) yearEl.textContent=String(new Date().getFullYear());
+    // Mobile menu toggle
+    const navToggle=document.querySelector('.nav-toggle');
+    const navMenu=document.getElementById('nav-menu');
+    navToggle?.addEventListener('click',()=>{
+      const expanded=navToggle.getAttribute('aria-expanded')==='true';
+      navToggle.setAttribute('aria-expanded',String(!expanded));
+      navMenu?.classList.toggle('open');
+    });
+    // Active underline by current path
+    (function(){
+      const links=document.querySelectorAll('.nav-menu a');
+      const path=location.pathname.split('/').pop()||'index.html';
+      links.forEach(l=>{
+        const href=l.getAttribute('href');
+        if(href && !href.startsWith('#')){
+          const file=href.split('/').pop();
+          if(file===path) l.classList.add('active');
+        }
+      });
+    })();
+    // Lightbox for service images
+    (function(){
+      const lightbox=document.querySelector('.lightbox-backdrop');
+      if(!lightbox) return;
+      const lightboxImg=lightbox.querySelector('img');
+      const targets=document.querySelectorAll('.service-card .service-img');
+      targets.forEach(img=>{
+        img.style.cursor='zoom-in';
+        img.addEventListener('click',()=>{
+          lightboxImg.src=img.src;
+          lightboxImg.alt=img.alt||'';
+          lightbox.classList.add('open');
+          lightbox.setAttribute('aria-hidden','false');
+        });
+      });
+      lightbox.addEventListener('click',(e)=>{
+        if(e.target===lightbox){
+          lightbox.classList.remove('open');
+          lightbox.setAttribute('aria-hidden','true');
+          lightboxImg.src='';
+        }
+      });
+      document.addEventListener('keydown',(e)=>{
+        if(e.key==='Escape' && lightbox.classList.contains('open')){
+          lightbox.classList.remove('open');
+          lightbox.setAttribute('aria-hidden','true');
+          lightboxImg.src='';
+        }
+      });
+    })();
+    </script>
+</body>
+</html>
+
+
